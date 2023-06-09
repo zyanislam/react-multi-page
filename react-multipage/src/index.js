@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Kanban from './pages/Kanban';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,7 +12,11 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <App/>,
+  },
+  {
+    path: "kanban",
+    element: <Kanban/>,
   },
 ]);
 
