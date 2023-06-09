@@ -8,8 +8,8 @@ function CollapsibleExample() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">KanBan</Nav.Link>
-            <Nav.Link href="#pricing">Gantt Chart</Nav.Link>
+            <Nav.Link href="#kanban">KanBan</Nav.Link>
+            <Nav.Link href="#gchart">Gantt Chart</Nav.Link>
             
           </Nav>
           <Nav>
