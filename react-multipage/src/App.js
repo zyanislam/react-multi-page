@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import Posts from './components/Posts';
+import { db } from 'firebase.js'
 
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
       imageURL: "https://res.cloudinary.com/practicaldev/image/fetch/s---WaM_VT8--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/nxo6lq82wbziz16f1xso.png"
     },
   ]);
+
+  useEffect(() => {
+    db.collection('posts').onSnapshot(snapshot)
+   }, [posts])
   
   return (
     <div>
