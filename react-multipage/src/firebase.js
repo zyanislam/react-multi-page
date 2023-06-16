@@ -1,6 +1,6 @@
-import firebase from "firebase";
+import { initializeApp } from 'firebase/app';
 
-const firebaseApp = firebase.initializeApp({
+const firebaseConfig = {
     apiKey: "AIzaSyBAZkNR2E8Bfru3LCThrELuoCGYTuVcCd4",
     authDomain: "projectsync-98cb4.firebaseapp.com",
     projectId: "projectsync-98cb4",
@@ -8,10 +8,7 @@ const firebaseApp = firebase.initializeApp({
     messagingSenderId: "224430306473",
     appId: "1:224430306473:web:8823a5715d6856d39ea5b8",
     measurementId: "G-CJ80ZJECCT"
-});
+};
 
-const db = firebaseApp.firestore();
-const auth = firebase.auth();
-const storage = firebase.storage();
-
-export { db, auth, storage };
+// Export the Firebase services you want to use
+export const app = initializeApp(firebaseConfig);
