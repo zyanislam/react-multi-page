@@ -26,8 +26,10 @@ function App() {
   ]);
 
   useEffect(() => {
-    db.collection('posts').onSnapshot(snapshot)
-   }, [posts])
+    db.collection('posts').onSnapshot(snapshot => {
+      setPosts(snapshot.docs.map(doc => doc.data()))
+    })
+   }, [])
   
   return (
     <div>
